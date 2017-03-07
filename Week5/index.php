@@ -9,7 +9,7 @@ echo "Hello World";
 echo "Hello,"." "."World";
     $myname="Alex";
     $myage=20;
-    echo "My name is". $myname. "and I am". $myage;
+    print "<p>My name is". $myname. "and I am". $myage."</p>";
     echo "I get printed";
 
     $name="Edgar";
