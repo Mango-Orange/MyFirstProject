@@ -1,7 +1,7 @@
 
 <?php
 
-$myage = 15;
+$myage = 21;
 
     if($myage>"16"){
         print "You can buy Specs";
