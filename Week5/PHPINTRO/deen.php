@@ -4,7 +4,7 @@
 $myage = "22";
 
     if($myage>"21"){
-        print "You can buy Specs";
+        print "You can buy Specs, Mugs & Sausage Rolls";
     }
 
 elseif($myage>"18"){
@@ -13,7 +13,7 @@ elseif($myage>"18"){
 
 
 elseif($myage>"16"){
-    print "You can buy Specs, Mugs & Sausage Rolls";
+    print "You can buy Specs";
 }
 else {
     print "You are too young still";
