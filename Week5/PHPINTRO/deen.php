@@ -1,7 +1,7 @@
 
 <?php
 
-$myage = "14";
+$myage = "18";
 
     if($myage>"21"){
         print "You can buy Specs, Mugs & Sausage Rolls";
