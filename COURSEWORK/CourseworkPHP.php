@@ -3,12 +3,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$target_dir = "COURSEWORK\CourseworkPHP";
+$target_dir = "COURSEWORK/CourseworkPHP";
 $target_file = $target_dir . basename($_FILES["filesToUpload"]["name"]);
 $upload0K = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
+if(isset($_POST["fileToUpload"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) { 
         echo "File is an image - " . $check["mine"] . ".";
