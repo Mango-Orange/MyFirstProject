@@ -9,7 +9,7 @@ if(isset($_POST["submit"])) {
     if($check !== false) { 
         echo "File is an image - " . $check["mine"] . ".";
         $upload0K = 1;
-    } else {
+    } else { 
         echo "file is not an image.";
         $upload0K = 0;
     }
