@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$target_dir = "CourseworkPHP/";
+$target_dir = "Coursework/CourseworkPHP/";
 $target_file = $target_dir . basename($_FILES["filesToUpload"]["name"]);
 $upload0K = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
