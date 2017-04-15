@@ -1,8 +1,8 @@
 <?php
 
-$target_dir ="CourseworkPHP/".$path. "/";
+$target_dir = "/CourseworkPHP";
 
-$target_file = $target_dir . "/". $path. ".jpeg";
+$target_file = $target_dir . basename($_FILES["filesToUpload"]["name"]);
 
 $uploadOk = 1;
 
