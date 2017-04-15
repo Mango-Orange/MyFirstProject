@@ -3,8 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$target_dir = "/CourseworkPHP";
-$target_file = $target_dir . basename($_FILES["filesToUpload"]["name"]);
+$target_dir = "/CourseworkPHP".$path. "/";
+$target_file = $target_dir . "/".$path. ".jpeg";
 $upload0K = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
