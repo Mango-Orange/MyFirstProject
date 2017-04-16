@@ -16,7 +16,7 @@ if(!$user_home->is_logged_in())
 
 {
 
-    $user_home->redirect('index.php');
+    $user_home->redirect('a.index.php');
 
 }
 
@@ -124,7 +124,7 @@ if ($uploadOk == 0) {
 
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
-        header('location: home.php');
+        header('location: a.home.php');
 
 
 
@@ -136,7 +136,7 @@ if ($uploadOk == 0) {
 
 }
 
- 
+
 
 ?>
 /**
