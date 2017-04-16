@@ -76,7 +76,7 @@ if(isset($_POST['btn-login']))
 
 <a href="../a.logout.php">Logout</a>
 
-<hr />
+<hr /> 
 
 <table width='80%' border=0>
 
