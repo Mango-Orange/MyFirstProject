@@ -177,7 +177,7 @@ $result1=mysql_query("SELECT member_ID FROM interest  WHERE sexual_orientation='
         </div>
 
 
-    </main>
+    </main> 
     
     
 
