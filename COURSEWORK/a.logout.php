@@ -45,7 +45,7 @@ if($user->is_logged_in()!="")
     $user->redirect('a.index.php');
 
 }
-
+ 
 
 
 ?>
