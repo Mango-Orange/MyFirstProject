@@ -150,7 +150,7 @@ if(isset($_GET['inactive']))
 
 </body>
 
-</html>
+</html> 
 /**
  * Created by PhpStorm.
  * User: 1615396
