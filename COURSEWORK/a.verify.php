@@ -103,7 +103,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
 			   <strong>sorry !</strong>  No Account Found : <a href='a.signup.php'>Signup here</a>
 
 			   </div>
-
+ 
 			   ";
 
     }
