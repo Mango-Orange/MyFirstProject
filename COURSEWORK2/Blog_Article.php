@@ -1,7 +1,7 @@
 <?php 
 
 include ("ConnectToAzureDB.php"); 
-include ("scripts/header_l2.php"); 
+include ("header.php"); 
  
 $articleID = $params['blogID'];
 echo " 
