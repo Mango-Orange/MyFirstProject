@@ -6,20 +6,22 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SPUC</title>
+    <title>The Blog of Charles Babbage</title>
+    <link rel="stylesheet" href="style/style.css">
+
 </head>
 
 <body>
 <header>
-    <h1>SPUC</h1>
+    <h1>The Blog of Charles Babbage</h1>
     <nav>
         <ul>
-            <li><a href="../../">Home Page</a></li>
+            <li><a href="./">Home Page</a></li>
             <li><a href="blog">My Blog</a></li>
             <li><a href="about">About Me</a></li>
             <li><a href="contactus">Contact Me</a></li>
             <?
-            if (isset($_SESSION['usename'])) {
+            if (isset($_SESSION['username'])) {
                 echo "<li><a href='createarticle'>Create Article</a></li>";
                 echo "<li><a href='logout'>Logout</a></li>";
             } else {
@@ -30,13 +32,3 @@ session_start();
         </ul>
     </nav>
 </header>
-
- 
-</body>
-</html>
-/**
- * Created by PhpStorm.
- * User: 1615396
- * Date: 18/04/2017
- * Time: 13:40
- */

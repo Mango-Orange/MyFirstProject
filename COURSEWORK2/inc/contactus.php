@@ -1,21 +1,14 @@
 <?php
 
-include("scripts/header.php");
+include ("scripts/header.php");
 
 echo "
 <main>
 <h2>Contact</h2>
-<p>Send me an e-mail at 1234@hotmail.com</p>
+<p>Send me an email at babbage@babbage-labs.com</p>
 </main>
 ";
 
-include("scripts/footer.php");
+include ("scripts/footer.php");
 
-?> 
-
-/**
- * Created by PhpStorm.
- * User: 1615396
- * Date: 18/04/2017
- * Time: 14:23
- */ 
+?>

@@ -1,11 +1,4 @@
 <footer>
-    <p>(c)2017 - Alex Enterprise Ltd</p>
+    <p>(c)2016 - Babbage Computing Systems</p>
 </footer>
 </body>
-
-/**
- * Created by PhpStorm.
- * User: 1615396
- * Date: 18/04/2017
- * Time: 14:07
- */ 

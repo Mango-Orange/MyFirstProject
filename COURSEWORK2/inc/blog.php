@@ -1,8 +1,8 @@
 <?php
-include("scripts/ConnectToAzureDB.php");
-include("scripts/header.php");
+include ("scripts/dbconnect.php");
+include ("scripts/header.php");
 
-echo"
+echo "
 <main>
 <h2>Blog Articles</h2>
 <p>Below is a list of all blog articles</p>
@@ -22,12 +22,6 @@ while($row = $result->fetch_array())
 echo "
 </main>
 ";
-include("scripts/footer.php");
+include ("scripts/footer.php");
 
 ?>
-/**
- * Created by PhpStorm. 
- * User: 1615396
- * Date: 18/04/2017
- * Time: 14:28
- */ 
