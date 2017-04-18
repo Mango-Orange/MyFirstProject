@@ -32,7 +32,7 @@ if (mysqli_query($db, $sql)) { 
           echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($db); 
 } 
     header("blog"); 
-} 
+}  
 //test 
 } else { 
     header("location:login"); 
