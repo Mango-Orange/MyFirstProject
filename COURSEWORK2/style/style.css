@@ -1,66 +1,133 @@
-@import 'https://fonts.googleapis.com/ css?family=Open+Sans|Pacifico'; 
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Pacifico';
+
+
 
 body{
+
     max-width:960px;
+
     margin-left: auto;
+
     margin-right: auto;
+
 }
+
+
 
 h1, h2, p{
+
     margin-top: 0;
+
 }
+
+
 
 *{
+
     font-family: 'Open Sans', cursive;
 
+
+
 }
+
 h1, h2{
+
     font-family: 'Pacifico', cursive;
+
 }
+
+
 
 /* HEADER */
+
 header{
-    background-colour: #a1a1a1;
+
+    background-color: #a1a1a1;
+
     padding-top: 14px;
+
 }
+
 header>h1{
+
     padding-left: 10px;
+
 }
 
-/* MAIN */
-main{
-    background-colour: #cccccc;
-    min-height: 300px;
-    padding: 15px;
-}
 
-/* FOOTER */
-footer{
-    background-colour: #a1a1a1;
-    padding: 5px 0 5px 10px;
-}
+
+
 
 /* NAVIGATION */
+
 nav ul {
+
     list-style-type: none;
+
     margin: 0;
+
     padding: 0;
+
     overflow: hidden;
-    background-colour: #333;
+
+    background-color: #333;
+
 }
+
+
 
 nav li {
+
     float: left;
+
 }
+
+
 
 nav li a {
+
     display: block;
+
     color: white;
+
     text-align: center;
+
     padding: 14px 16px;
+
     text-decoration: none;
+
 }
 
+
+
 nav li a:hover {
-    background-colour: #111;
+
+    background-color: #111;
+
+}
+
+
+
+/* MAIN */
+
+main{
+
+    background-color: #cccccc;
+
+    min-height: 300px;
+
+    padding: 15px;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+    background-color: #a1a1a1;
+
+    padding: 5px 0 5px 10px;
+
 }
