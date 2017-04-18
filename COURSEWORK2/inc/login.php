@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
-    include("scripts/dbconnect.php");
+    include("scripts/ConnectToAzureDB.php");
 
     $username = $_POST["username"];
     $password = $_POST["password"];
