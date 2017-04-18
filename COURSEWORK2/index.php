@@ -15,7 +15,7 @@ $rules = array(
     'blog' => "/blog",
     'blog_article' => "/blog/(?'blogID'[\w\-]+)",
 
-    //
+    // 
     //Admin Pages
     //
     'login' => "/login",
