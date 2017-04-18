@@ -36,5 +36,6 @@ if (mysqli_query($db, $sql)) { 
 //test 
 } else { 
     header("location:login"); 
-}  
+} 
 ?> 
+ 
