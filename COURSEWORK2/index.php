@@ -68,7 +68,7 @@ foreach ($rules as $action => $rule) {
 
     if (preg_match('~^' . $rule . '$~i', $uri, $params)) {
 
-        include(INCLUDE_DIR . $action . '.php');
+        include(INCLUDE_DIR . $action . '404.php');
 
         exit();
 
