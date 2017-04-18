@@ -24,7 +24,7 @@ while($row = $result->fetch_array()) 
 <h3>by {$articleAuthor}</h3> 
 {$articleText} 
 </atricle>"; 
-} 
+}  
 
 echo " 
 </main> 
