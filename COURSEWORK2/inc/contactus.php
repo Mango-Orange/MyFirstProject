@@ -1,6 +1,6 @@
 <?php
 
-include("header.php");
+include("scripts/header.php");
 
 echo "
 <main>
@@ -9,7 +9,7 @@ echo "
 </main>
 ";
 
-include("footer.php");
+include("scripts/footer.php");
 
 ?>
 
