@@ -10,7 +10,7 @@ echo "
 
 include("scripts/footer.php");
 
-?>
+?> 
  
 /**
  * Created by PhpStorm.
