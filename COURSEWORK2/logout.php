@@ -5,7 +5,7 @@ if (isset($_SESSION['username']))
     unset($_SESSION['username']);
 }
 header("location:./");
-?>
+?> 
 /**
  * Created by PhpStorm.
  * User: 1615396
