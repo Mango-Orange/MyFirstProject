@@ -1,7 +1,7 @@
 <?php 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') { 
      
-    include("scripts/header.php"); 
+    include("header.php"); 
     ?> 
     <main> 
         <form action="login" method="post"> 
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') { 
     </main> 
     <? 
      
-    include("scripts/footer.php"); 
+    include("footer.php"); 
      
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') { 
      
