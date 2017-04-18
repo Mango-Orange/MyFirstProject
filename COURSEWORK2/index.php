@@ -11,7 +11,7 @@ $rules = array(
     'blog' => "/blog",
     'blog_article' => "/blog/(?'blogID'[\w\-]+)",
 
-    //
+    // 
     //Admin Pages
     //
     'login' => "/login",
@@ -35,7 +35,7 @@ foreach ($rules as $action => $rule) {
 }
 
 // nothing is found so handle the 404 error
-include(INCLUDE_DIR . '404.php'); 
+include(INCLUDE_DIR . '404.php');
 
 ?>
 
