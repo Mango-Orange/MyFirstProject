@@ -1,6 +1,6 @@
 <?php
 
-include ("header.php");
+include("header.php");
 
 echo "
 <main>
@@ -8,7 +8,7 @@ echo "
 </main>main>
 ";
 
-include ("footer.php");
+include("footer.php");
 
 ?>
  

@@ -17,7 +17,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST 
     <? 
     include("footer.php"); 
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-          include ('ConnectToAzureDB.php'); 
+          include('ConnectToAzureDB.php'); 
     $articleID = str_replace(' ', '-', $_POST["articleName"]); 
     $articleName = $_POST["articleName"]; 
     $articleText = $_POST["articleText"]; 

@@ -1,6 +1,6 @@
 <?php
-include ("ConnectToAzureDB.php");
-include ("header.php");
+include("ConnectToAzureDB.php");
+include("header.php");
 
 echo"
 <main>
@@ -22,7 +22,7 @@ while($row = $result->fetch_array())
 echo "
 </main>
 ";
-include ("footer.php");
+include("footer.php");
 
 ?>
 /**
