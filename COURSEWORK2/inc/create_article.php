@@ -1,39 +1,16 @@
-<?php
-session_start();
-if (isset($_SESSION['username'])) //SESSION DOES EXIST
-{
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-        include("scripts/header.php");
-        ?>
-        <main>
-        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({selector: 'textarea'});</script>
-        <form action="createarticle" method="post">
-            <input type="text" name="articleName" placeholder="Article Name">
-            <textarea name="articleText"></textarea>
-            <input type="submit">
-        </form>
-        </main>
-        <?
-        include("scripts/footer.php");
-    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        include ('scripts/dbconnect.php');
-        $articleID = str_replace(' ', '-', $_POST["articleName"]);
-        $articleName = $_POST["articleName"];
-        $articleText = $_POST["articleText"];
-        $articleAuthor = $_SESSION['username'];
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="Submit">
+</form>
 
-        $sql = "INSERT INTO blogArticles (articleID, articleName, articleText, articleAuthor) VALUES ('". $articleID ."', '" .$articleName."', '".$articleText."', '".$articleAuthor."')";
-
-        if (mysqli_query($db, $sql)) {
-        } else {
-            echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($db);
-        }
-        header("blog");
-    }
-//test
-} else {
-    header("location:login");
-}
-?>
+</body>
+</html>
