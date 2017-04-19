@@ -1,15 +1,95 @@
 <?php
 
-include ("scripts/header.php");
+session_start();
 
-echo "
-<main>
-<h2>About Me</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eros quam, pharetra ornare venenatis nec, eleifend vulputate dui. Phasellus a faucibus elit. Vivamus sit amet porttitor quam. Nullam ut felis euismod, pulvinar felis a, mollis sem. Praesent non magna hendrerit, hendrerit justo consequat, convallis mauris. Donec accumsan eros nibh, non imperdiet libero tincidunt efficitur. Integer mattis augue sed pulvinar fringilla. In mollis ultrices enim, nec porttitor risus viverra luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla pretium sagittis ultrices. Nunc vel erat eu ante varius rhoncus id ut libero. Vestibulum ut nunc rutrum, tempus arcu a, maximus dui.</p>
-<p>Fusce ac faucibus odio, id malesuada nibh. Proin id blandit lectus. Suspendisse potenti. Integer accumsan aliquet erat at faucibus. Aliquam sed tristique nisl. Morbi at mi eu lacus rutrum facilisis nec eu diam. Mauris condimentum facilisis sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-</main>
-";
+if (isset($_SESSION['username'])) //SESSION DOES EXIST
 
-include ("scripts/footer.php");
+{
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+
+
+
+        include("scripts/header.php");
+
+        ?>
+
+        <main>
+
+            <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+
+            <script>tinymce.init({selector: 'textarea'});</script>
+
+            <form action="create_article" method="post">
+
+                <input type="text" name="articleName" placeholder="Article Name">
+
+                <textarea name="articleText"></textarea>
+
+                <input type="submit">
+
+            </form>
+
+        </main>
+
+        <?
+
+        include("scripts/footer.php");
+
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        include ("scripts/ConnectToAzureDB.php");
+
+        $articleID = str_replace(' ', '-', $_POST["articleName"]);
+
+        $articleName = $_POST["articleName"];
+
+        $articleText = $_POST["articleText"];
+
+        $articleAuthor = $_SESSION['username'];
+
+
+
+        $sql = "INSERT INTO blogArticles (articleID, articleName, articleText, articleAuthor) VALUES ('". $articleID ."', '" .$articleName."', '".$articleText."', '".$articleAuthor."')";
+
+
+
+        if (mysqli_query($db, $sql)) {
+
+        } else {
+
+            echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($db);
+
+        }
+
+        header("blog");
+
+    }
+
+//test
+
+} else {
+
+    header("location:login");
+
+}
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="Submit">
+</form>
+
+</body>
+</html>
+
