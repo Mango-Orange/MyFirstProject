@@ -53,8 +53,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
 
 
 
-        $sql = "INSERT INTO blogArticles (articleID, articleName, articleText, articleAuthor) VALUES ('". $articleID ."', '" .$articleName."', '".$articleText."', '".$articleAuthor."')";
-
+        
 
 
         if (mysqli_query($db, $sql)) {
