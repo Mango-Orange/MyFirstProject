@@ -15,7 +15,7 @@ $rules = array(
     //Admin Pages
     //
     'login' => "/login",
-    'create_article' => "/createarticle",
+    'Uploadphotos' => "/Uploadphotos",
     'logout' => "/logout",
     //
     // Home Page
