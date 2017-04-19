@@ -1,1 +1,2 @@
-<p>Below is a list of all blog articles</p>
+<H1>PHOTO ACCEPTED</H1>
+<H2>JPEG type!</H2>
