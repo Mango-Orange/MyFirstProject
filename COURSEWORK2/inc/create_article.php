@@ -20,7 +20,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
 
             <script>tinymce.init({selector: 'textarea'});</script>
 
-            <form action="create_article" method="post">
+            <form action="createarticle" method="post">
 
                 <input type="text" name="articleName" placeholder="Article Name">
 
