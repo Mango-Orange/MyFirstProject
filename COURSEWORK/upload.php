@@ -8,6 +8,7 @@ $uploadOk = 1;
 
 $imageFileType = pathinfo($_FILES['fileToUpload'],PATHINFO_EXTENSION);
 
+echo "file:".$_FILES['fileToUpload'];
 // Check if image file is a actual image or fake image
 
 if(isset($_POST["submit"])) {
