@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "CourseworkPHP/";
+$target_dir = "H:\Alex_MY STUFF/";
 
 $target_file = $target_dir . basename($_FILES["filesToUpload"]["name"]);
 
