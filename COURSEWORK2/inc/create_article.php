@@ -31,7 +31,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
             </form>
 
             </body>
-            </html>
+            </html> 
 
         </main>
 
