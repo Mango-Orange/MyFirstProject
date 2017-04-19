@@ -38,7 +38,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
 
     } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        include ('scripts/dbconnect.php');
+        include ("scripts/ConnectToAzureDB.php");
 
         $articleID = str_replace(' ', '-', $_POST["articleName"]);
 
