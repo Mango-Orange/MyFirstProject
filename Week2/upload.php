@@ -14,7 +14,7 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 }
-?>
+?> 
 
 // Check if file already exists
 if (file_exists($target_file)) {
@@ -71,4 +71,4 @@ if ($uploadOk == 0) {
                 echo "Sorry, there was an error uploading your file.";
     }
 }
-?> 
+?>
