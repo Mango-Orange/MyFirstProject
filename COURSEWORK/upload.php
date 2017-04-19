@@ -84,6 +84,8 @@ if ($uploadOk == 0) {
     } else {
 
         echo "Sorry, there was an error uploading your file.";
+        echo "File".$_FILES["fileToUpload"]["tmp_name"]."<br>";
+        echo "Target:".$target_file;
 
     }
 
