@@ -30,7 +30,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
                 <input type="submit" value="Upload Image" name="Submit">
             </form>
 
-            </body>
+            </body> 
             </html> 
 
         </main>
