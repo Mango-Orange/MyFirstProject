@@ -22,7 +22,7 @@ session_start();
             <li><a href="contactus">Contact Me</a></li>
             <?
             if (isset($_SESSION['username'])) {
-                echo "<li><a href='as'>Upload Photos</a></li>";
+                echo "<li><a href='create_article'>Upload Photos</a></li>";
                 echo "<li><a href='logout'>Logout</a></li>";
             } else {
                 echo "<li><a href='login'>Login</a></li>";
@@ -30,5 +30,5 @@ session_start();
             ?>
 
         </ul>
-    </nav> 
+    </nav>
 </header>
