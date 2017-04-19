@@ -7,10 +7,8 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 
 $imageFileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
-$ext = $imageFileType['extension'];
 
 echo "file:".$_FILES["fileToUpload"]["name"];
-echo "Ext:".$ext;
 
 // Check if image file is a actual image or fake image
 
@@ -57,10 +55,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 
 // Allow certain file formats
 
-if($imageFileType != "jpg" or $imageFileType != "png" or $imageFileType != "jpeg"
-
-    or $imageFileType != "gif" ) {
-
+if($imageFileType != "jpg" and $imageFileType != "png" and $imageFileType != "jpeg" and $imageFileType != "gif" ) {
 
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed. Your file type was:".$imageFileType."<br>";
 
@@ -80,7 +75,7 @@ if ($uploadOk == 0) {
 
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"] ). " has been uploaded.";
 
         // header('location: home.php');
 
