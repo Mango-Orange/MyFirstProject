@@ -16,19 +16,22 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
 
         <main>
 
-            <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Title</title>
+            </head>
+            <body>
 
-            <script>tinymce.init({selector: 'textarea'});</script>
-
-            <form action="createarticle" method="post">
-
-                <input type="text" name="articleName" placeholder="Article Name">
-
-                <textarea name="articleText"></textarea>
-
-                <input type="submit">
-
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="Submit">
             </form>
+
+            </body>
+            </html>
 
         </main>
 
