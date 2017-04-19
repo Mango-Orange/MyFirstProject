@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "./COURSEWORK/CourseworkPHP/";
+$target_dir = "./COURSEWORK2/uploads/";
 
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
