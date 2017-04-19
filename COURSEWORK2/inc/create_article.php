@@ -1,4 +1,7 @@
 <?php
+
+include ("scripts/header.php");
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
