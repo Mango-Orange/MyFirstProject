@@ -6,7 +6,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
 $uploadOk = 1;
 
-$imageFileType = pathinfo($_FILES['fileToUpload'],PATHINFO_EXTENSION);
+$imageFileType = pathinfo($_POST['fileToUpload'],PATHINFO_EXTENSION);
 
 echo "file:".$_FILES['fileToUpload'];
 // Check if image file is a actual image or fake image
