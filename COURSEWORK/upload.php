@@ -7,8 +7,11 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 
 $imageFileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
+$ext = $imageFileType['extension'];
 
 echo "file:".$_FILES["fileToUpload"]["name"];
+echo "Ext:".$ext;
+
 // Check if image file is a actual image or fake image
 
 if(isset($_POST["submit"])) {
@@ -54,7 +57,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 
 // Allow certain file formats
 
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+if($ext != "jpg" && $ext != "png" && $ext != "jpeg"
 
     && $imageFileType != "gif" ) {
 
