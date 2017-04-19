@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "COURSEWORK/CourseworkPHP";
+$target_dir = "./COURSEWORK/courseworkPHP";
 
 $target_file = $target_dir . basename($_FILES["filesToUpload"]["name"]);
 
@@ -52,9 +52,10 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 
 // Allow certain file formats
 
-if($imageFileType != "png" && $imageFileType != "jpeg"
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 
     && $imageFileType != "gif" ) {
+    echo $imageFileType;
 
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 
