@@ -1,2 +1,2 @@
 <H1>PHOTO ACCEPTED</H1>
-<H2>JPEG type!</H2>
+<H2>.JPG type!</H2>
