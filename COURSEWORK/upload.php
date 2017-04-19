@@ -14,6 +14,7 @@ if(isset($_POST["submit"])) {
 
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 
+
     if($check !== false) {
 
         echo "File is an image - " . $check["mime"] . ".";
@@ -55,7 +56,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 
     && $imageFileType != "gif" ) {
-    echo $imageFileType;
+    echo "file type:".$imageFileType."<br>";
 
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 
@@ -77,7 +78,7 @@ if ($uploadOk == 0) {
 
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
-        header('location: home.php');
+        // header('location: home.php');
 
 
 
@@ -92,13 +93,3 @@ if ($uploadOk == 0) {
 
 
 ?>
-
-
-
-
-/**
- * Created by PhpStorm.
- * User: 1615396
- * Date: 15/04/2017
- * Time: 17:22
- */
