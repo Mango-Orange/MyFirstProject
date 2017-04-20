@@ -27,10 +27,15 @@ echo "
 
         </form>
 
+
+</main>
 ";
+
+$sql="INSERT INTO users (username, password) VALUES ($name, $email)");
+
+include ("scripts/footer.php");
 
 ?>
 
-
-
+$sql="INSERT INTO users (username, password) VALUES ($name, $email)");
 
