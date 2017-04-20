@@ -1,9 +1,8 @@
 <?php
 
-include("scripts/header.php");
+include ("scripts/header.php");
 
-// execute if requested using HTTP GET Method
-echo "
+echo \"
     <main>
         <H1>REGISTER</H1>
         <form action="signup.php" method="post">
@@ -12,8 +11,8 @@ echo "
             <p><input type="submit" value="Submit"></p>
         </form>
     </main>
-";
+\";
 
-include ("scripts/footer.php");
+include (\"scripts/footer.php\");
 
 ?>
