@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         function checklogin($username, $password, $db)
         {
-            $stmt = $this->conn->prepare("INSERT INTO users(username,password) 
+            $sql = $this->conn->prepare("INSERT INTO users(username,password) 
 
 			                                             VALUES(:username, :password)");
             
