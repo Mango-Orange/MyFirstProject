@@ -164,7 +164,7 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
 
                     <br />
 
-                    <a href="Uploadphotos.php"><input type="button" name="nextpage" value="Proceed to next page" /></a>
+                    <a href="upload.php"><input type="button" name="nextpage" value="Proceed to next page" /></a>
 
                 </form>
 

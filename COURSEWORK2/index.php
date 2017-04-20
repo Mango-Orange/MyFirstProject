@@ -21,7 +21,7 @@ $rules = array(
     'logout' => "/logout",
     //
     // Home Page
-    //
+    // 
     'home' => "/"
     //
     // Style
