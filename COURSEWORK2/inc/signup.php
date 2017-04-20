@@ -1,4 +1,5 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     include("scripts/header.php");
 
@@ -14,19 +15,43 @@
         </form>
     </main>
     <?
-
+    
     include("scripts/footer.php");
 
-    $stmt = $this->conn->prepare("INSERT INTO users(username,password) 
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+
+        include("scripts/ConnectToAzureDB.php");
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+
+        function checklogin($username, $password, $db)
+        {
+            $stmt = $this->conn->prepare("INSERT INTO users(username,password) 
 
 			                                             VALUES(:username, :password)");
+            
+            $result = $db->query($sql);
+            while ($row = $result->fetch_array()) {
+                return true;
+            }
+            return false;
+        }
 
-    $stmt->bindparam(":username",$username);
+        if (checklogin($username, $password, $db)) {
+            session_start();
+            $_SESSION['username'] = $username;
+            header("location:./");
+        } else {
+            header("location:login");
+        }
 
-    $stmt->bindparam(":password",$password);
 
-    $stmt->execute();
+    } else {
+        // this is impossible
+        print('whoops');
+    }
+?>
 
-    return $stmt;
-
-    ?>
