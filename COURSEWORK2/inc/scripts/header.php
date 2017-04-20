@@ -20,6 +20,7 @@ session_start();
             <li><a href="blog">Disclaimer</a></li>
             <li><a href="about">About Me</a></li>
             <li><a href="contactus">Contact Me</a></li>
+            <li><a href="signup">Sign-Up</a></li>
             <?
             if (isset($_SESSION['username'])) {
                 echo "<li><a href='Uploadphotos'>Upload Photos</a></li>";
