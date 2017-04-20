@@ -2,7 +2,7 @@
 
 include ("scripts/header.php");
 
-echo "
+echo " 
 <main>
 
         <form action=\"\">
