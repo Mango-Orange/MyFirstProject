@@ -4,7 +4,7 @@ include ("scripts/header.php");
 
 echo "
 <main>
-<h2>Blog Articles</h2>
+<h2>Terms and Conditions</h2>
 <p>Terms and Conditions</p>
 <ul>
 ";
