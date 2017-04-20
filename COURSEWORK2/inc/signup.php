@@ -30,9 +30,9 @@ echo "
 
 </main>
 ";
-
-?>
 include ("scripts/footer.php");
+?>
+
 
 
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
