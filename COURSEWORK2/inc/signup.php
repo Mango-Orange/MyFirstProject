@@ -1,8 +1,10 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-include ("scripts/header.php");
+include("scripts/header.php");
 
-echo " 
+// execute if requested using HTTP GET Method
+?>
 <main>
 
         <form action=\"\">
@@ -29,35 +31,40 @@ echo "
 
 
 </main>
-";
+    <?
 
-include ("scripts/footer.php");
+    include("scripts/footer.php");
 
-?>
-
-<?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "localDB";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn);{
-   ; die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "INSERT INTO users (username, password)
-VALUES ('Alex', 'alex@example.com')";
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
-if (mysqli_query($conn, $sql)) {
-   ; echo "New record created successfully";
+    include("scripts/ConnectToAzureDB.php");
+
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+
+    function checklogin($username, $password, $db)
+    {
+        $sql = "INSERT INTO users WHERE username='" . $username . "' and password='" . $password . "'";
+        $result = $db->query($sql);
+        while ($row = $result->fetch_array()) {
+            return true;
+        }
+        return false;
+    }
+
+    if (checklogin($username, $password, $db)) {
+        session_start();
+        $_SESSION['username'] = $username;
+        header("location:./");
+    } else {
+        header("location:login");
+    }
+
+
 } else {
- ;  ; echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    // this is impossible
+    print('whoops');
 }
-
-mysqli_close($conn);
 ?>
-
