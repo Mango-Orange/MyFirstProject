@@ -5,7 +5,6 @@ include("scripts/header.php");
 
 // execute if requested using HTTP GET Method
 ?>
-    ?>
     <main>
         <form action="signup.php" method="post">
             <input type="text" name="username" placeholder="username"></br>
