@@ -34,3 +34,8 @@ echo "
 include ("scripts/footer.php");
 
 ?>
+
+$sql="INSERT INTO users (username, password) VALUES ($name, $email)";
+$result = $db->query($sql);
+
+
