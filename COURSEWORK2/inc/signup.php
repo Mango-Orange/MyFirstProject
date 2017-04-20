@@ -3,7 +3,7 @@
 include("scripts/header.php");
 
 // execute if requested using HTTP GET Method
-    ?>
+echo "
     <main>
         <H1>REGISTER</H1>
         <form action="signup.php" method="post">
