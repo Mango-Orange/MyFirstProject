@@ -29,6 +29,6 @@ session_start();
             }
             ?>
 
-        </ul>
-    </nav> 
+        </ul> 
+    </nav>
 </header>

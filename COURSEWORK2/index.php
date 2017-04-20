@@ -17,6 +17,7 @@ $rules = array(
     'login' => "/login",
     'Uploadphotos' => "/Uploadphotos",
     'upload' => "/upload",
+    'Profiledetails' => "/Profiledetails"
     'logout' => "/logout",
     //
     // Home Page
