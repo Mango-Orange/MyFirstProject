@@ -25,8 +25,6 @@ echo "
 
             <br />
 
-            <a href=\"Photoupload.html\"><input type=\"button\" name=\"nextpage\" value=\"Proceed to next page\" /></a>
-
         </form>
 
 
