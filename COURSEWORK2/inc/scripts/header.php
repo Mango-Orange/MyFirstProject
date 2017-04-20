@@ -13,7 +13,7 @@ session_start();
 
 <body>
 <header>
-    <h1>Student Photo Upload Commenter (SPUC)</h1>
+    <h1>Student Photo Upload Commenter (SPUC)</h1> 
     <nav>
         <ul>
             <li><a href="./">Home Page</a></li>
