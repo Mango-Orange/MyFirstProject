@@ -35,6 +35,7 @@ include ("scripts/footer.php");
 
 ?>
 
+<?php
 $servername = "localhost";
 $username = "username";
 $password = "password";
@@ -58,3 +59,5 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
+?>
+
