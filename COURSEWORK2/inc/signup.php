@@ -5,32 +5,14 @@ include("scripts/header.php");
 
 // execute if requested using HTTP GET Method
 ?>
-<main>
-
-        <form action=\"\">
-
-            <fieldset>
-
-                <legend>Profile Details</legend>
-
-                <label for=\"Username\">First name: </label>
-
-                <input type=\"text\" name=\"firstName\" /><br />
-
-                <label for=\"email\">RGU email: </label>
-
-                <input type=\"email\" name=\"email\" /><br />
-
-            </fieldset><br />
-
+    ?>
+    <main>
+        <form action="signup.php" method="post">
+            <input type="text" name="username" placeholder="username"></br>
+            <input type="password" name="password" placeholder="password"></br>
             <p><input type="submit" value="Submit"></p>
-
-            <br />
-
         </form>
-
-
-</main>
+    </main>
     <?
 
     include("scripts/footer.php");
