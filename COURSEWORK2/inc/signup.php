@@ -69,5 +69,5 @@ print('whoops');
 }
 ?>
 
-// $sql="INSERT INTO users (username, password) VALUES ($username, $password)");
+  //$sql="INSERT INTO users (username, password) VALUES ($username, $password)");
 
