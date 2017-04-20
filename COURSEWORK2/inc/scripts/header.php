@@ -11,9 +11,9 @@ session_start();
 
 </head>
 
-<body> 
+<body>
 <header>
-    <h1>The Blog of Charles Babbage</h1>
+    <h1>Student Photo Upload Commenter (SPUC)</h1>
     <nav>
         <ul>
             <li><a href="./">Home Page</a></li>
