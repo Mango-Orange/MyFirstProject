@@ -11,7 +11,7 @@ session_start();
 
 </head>
 
-<body>
+<body> 
 <header>
     <h1>The Blog of Charles Babbage</h1>
     <nav>
