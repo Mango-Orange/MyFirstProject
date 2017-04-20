@@ -25,9 +25,8 @@ while($row = $result->fetch_array())
 
     echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
 }
-echo "
+
 </main>
-";
 
 include ("scripts/footer.php");
 
