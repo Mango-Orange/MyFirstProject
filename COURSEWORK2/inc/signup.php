@@ -13,7 +13,11 @@ include("scripts/header.php");
             <p><input type="submit" value="Submit"></p>
         </form>
     </main>
-    <?
+
+
+
 
     include("scripts/footer.php");
 
+<?
+    
