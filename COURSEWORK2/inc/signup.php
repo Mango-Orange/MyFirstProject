@@ -17,4 +17,16 @@
 
     include("scripts/footer.php");
 
+    $stmt = $this->conn->prepare("INSERT INTO users(username,password) 
+
+			                                             VALUES(:username, :password)");
+
+    $stmt->bindparam(":username",$username);
+
+    $stmt->bindparam(":password",$password);
+
+    $stmt->execute();
+
+    return $stmt;
+
     ?>
