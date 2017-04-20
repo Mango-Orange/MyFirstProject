@@ -23,6 +23,7 @@ session_start();
             <?
             if (isset($_SESSION['username'])) {
                 echo "<li><a href='Uploadphotos'>Upload Photos</a></li>";
+                echo "<li><a href='Profiledetails'>Profile Details</a></li>";
                 echo "<li><a href='logout'>Logout</a></li>";
             } else {
                 echo "<li><a href='login'>Login</a></li>";
