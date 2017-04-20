@@ -42,7 +42,7 @@ h1, h2{
 
 header{
 
-    background-color: #a1a1a1;
+    background-color: #803b81;
 
     padding-top: 14px;
 
@@ -70,7 +70,7 @@ nav ul {
 
     overflow: hidden;
 
-    background-color: #666;
+    background-color: #651466;
 
 }
 
@@ -102,7 +102,7 @@ nav li a {
 
 nav li a:hover {
 
-    background-color: #250;
+    background-color: #1a5522;
 
 }
 
@@ -112,7 +112,7 @@ nav li a:hover {
 
 main{
 
-    background-color: #cccccc;
+    background-color: #bb2ecc;
 
     min-height: 300px;
 
@@ -126,7 +126,7 @@ main{
 
 footer{
 
-    background-color: #a1a1a1;
+    background-color: #2ca125;
 
     padding: 5px 0 5px 10px;
 
