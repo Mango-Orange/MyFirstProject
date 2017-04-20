@@ -42,7 +42,7 @@ include ("scripts/footer.php");
 
     include(\"scripts/ConnectToAzureDB.php\");
 
-    $username = $_POST[\"username\"];
+    $username = $_POST[\"username\"]; 
     $password = $_POST[\"password\"];
 
 
