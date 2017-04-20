@@ -9,6 +9,7 @@ $rules = array(
     'about' => "/about",
     'contactus' => "/contactus",
     'blog' => "/blog",
+    'signup' => "/signup",
     'blog_article' => "/blog/(?'blogID'[\w\-]+)",
 
     //
