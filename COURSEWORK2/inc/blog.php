@@ -28,6 +28,7 @@ while($row = $result->fetch_array())
 echo "
 </main>
 ";
+
 include ("scripts/footer.php");
 
 ?>
