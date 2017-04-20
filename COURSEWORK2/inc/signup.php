@@ -1,4 +1,9 @@
 <?php
+
+include ("scripts/header.php");
+
+echo "
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -164,5 +169,8 @@
     </body>
 
     </html>
+";
 
->?
+include (\"scripts/footer.php\");
+
+?>
