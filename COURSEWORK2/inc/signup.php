@@ -1,11 +1,8 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 include ("scripts/header.php");
 
 echo " 
-
-?>
 <main>
 
         <form action=\"\">
@@ -32,7 +29,8 @@ echo "
 
 
 </main>
+";
 
-include (\"scripts/footer.php\");
+include ("scripts/footer.php");
 
 ?>
