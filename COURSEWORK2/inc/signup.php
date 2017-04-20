@@ -28,7 +28,8 @@ include("scripts/header.php");
 
     function checklogin($username, $password, $db)
     {
-        $sql = "INSERT INTO users WHERE username='\" . $username . \"' and password='\" . $password . \"'\";
+        $sql = "INSERT INTO users(username, password)
+                  VALUES(:username, :password);    
         $result = $db->query($sql);
         while ($row = $result->fetch_array()) {
             return true;
