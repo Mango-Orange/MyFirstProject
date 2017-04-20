@@ -13,10 +13,38 @@ echo "
 <p>2.	You are responsible for keeping your password secret and secure.</p>
 <p>3.	You are solely responsible for your conduct and any data, text, files, information, usernames, images, graphics, photos, profiles, audio and video clips, sounds, musical works, works of authorship, applications, links and other content or materials (collectively, \"Content\") that you submit, post or display on (SPUC).</p>
 <ul>
+";
+
+
+
+$sql = "SELECT * FROM blogArticles ";
+
+$result = $db->query($sql);
+
+while($row = $result->fetch_array())
+
+{
+
+    $articleID = $row['articleID'];
+
+    $articleName = $row['articleName'];
+
+    $articleAuthor = $row['articleAuthor'];
+
+
+
+    echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
+
+}
+
+echo "
 
 </main>
+
 ";
 
 include ("scripts/footer.php");
+
+
 
 ?>
