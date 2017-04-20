@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Blog of Charles Babbage</title>
+    <title>Student Photo Upload Commenter (SPUC)</title>
     <link rel="stylesheet" href="style/style.css">
 
 </head>
