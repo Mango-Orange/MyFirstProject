@@ -14,10 +14,8 @@ include("scripts/header.php");
         </form>
     </main>
 
+";
 
+include ("scripts/footer.php");
 
-
-    include("scripts/footer.php");
-
-<?
-    
+?>
