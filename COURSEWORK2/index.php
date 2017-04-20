@@ -40,5 +40,8 @@ foreach ($rules as $action => $rule) {
     }
 }
 
+// nothing is found so handle the 404 error
+include(INCLUDE_DIR . '404.php');
+
 
 ?>
