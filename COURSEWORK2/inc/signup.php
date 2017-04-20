@@ -23,7 +23,7 @@ include("scripts/header.php");
 
             </fieldset><br />
 
-            <input type=\"submit\" name=\"submit\" value=\"Submit\" />
+            <input type=\"submit\" name=\"submit\" value=\"Submit"\ />
 
             <br />
 
