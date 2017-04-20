@@ -13,11 +13,11 @@ session_start();
 
 <body>
 <header>
-    <h1>Student Photo Upload Commenter (SPUC)</h1> 
+    <h1>Student Photo Upload Commenter (SPUC)</h1>
     <nav>
         <ul>
             <li><a href="./">Home Page</a></li>
-            <li><a href="blog">My Blog</a></li>
+            <li><a href="blog">Disclaimer</a></li>
             <li><a href="about">About Me</a></li>
             <li><a href="contactus">Contact Me</a></li>
             <?
