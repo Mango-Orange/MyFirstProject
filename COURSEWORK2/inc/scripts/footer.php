@@ -1,4 +1,4 @@
 <footer>
-    <p>(c)2016 - Babbage Computing Systems</p>
+    <p>(c)2017 - CMM007 ltd</p>
 </footer>
 </body>
