@@ -5,7 +5,7 @@ include ("scripts/header.php");
 echo "
 <main>
 <h2>Contact</h2>
-<p>Send me an email at babbage@babbage-labs.com</p>
+<p>e-mail: SPUC@rgu.ac.uk</p>
 </main>
 ";
 
