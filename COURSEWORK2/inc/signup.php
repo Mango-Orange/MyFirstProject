@@ -30,18 +30,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $username = $_POST["username"];
         $password = $_POST["password"];
 
+    // Create connection
+    $conn = mysqli_connect($username, $password);
+// Check connection
+    if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+}
 
-        function checklogin($username, $password, $db)
-        {
             $sql= "INTSERT INTO users (username, password)
                 VALUES ($username, $password)";
-            while ($row = $result->fetch_array()) {
-                return true;
-            }
-            return false;
-        }
 
-        if (checklogin($username, $password, $db)) {
+
+    if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+} else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+
+    if (checklogin($username, $password, $db)) {
             session_start();
             $_SESSION['username'] = $username;
             header("location:./");
