@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $dbname = "users";
 
 // Create connection
-    $conn = mysqli_connect($username, $password, $dbname);
+    $conn = mysqli_connect($username, $password, $users);
 // Check connection
     if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
