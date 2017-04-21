@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     ?>
     <main>
         <H1>REGISTER</H1>
-        <form action="login" method="post">
+        <form action="signup" method="post">
             <input type="text" name="username" placeholder="username"></br>
             <input type="password" name="password" placeholder="password"></br>
             <p><input type="submit" value="Submit"></p>
@@ -30,10 +30,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $username = $_POST["username"];
         $password = $_POST["password"];
 
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "localdb";
+
+// Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+    if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+}
+
 
         function checklogin($username, $password, $db)
         {
-            $sql= "INTSERT INTO users (username, password)
+            $sql = "INTSERT INTO users (username, password)
                 VALUES ($username, $password)";
             while ($row = $result->fetch_array()) {
                 return true;
