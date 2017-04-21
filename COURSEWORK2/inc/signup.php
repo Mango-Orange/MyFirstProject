@@ -2,7 +2,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-}
+
     include("scripts/header.php");
 
     // execute if requested using HTTP GET Method
@@ -33,9 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         function checklogin($username, $password, $db)
         {
-            $sql = "INSERT INTO users WHERE username='" . $username . "' and password='" . $password . "'";
-                VALUES ($surname, $password)
-            $result = $db->query($sql);
+            $sql= "INTSERT INTO users (username, password)
+                VALUES ($username, $password)";
             while ($row = $result->fetch_array()) {
                 return true;
             }
@@ -57,3 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 ?>
 
+
+
+$sql = INSERT INTO users (username, password)
+        VALUES ($surname, $password)
