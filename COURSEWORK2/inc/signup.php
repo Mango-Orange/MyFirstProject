@@ -32,15 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-    $username = "username";
-    $password = "password";
+
     $dbname = "localdb";
 
 
         function checklogin($username, $password, $db)
         {
             $sql = "INSERT INTO users (username, password)
-                VALUES ($username, $password)";
+                VALUES ('$username', '$password')";
 
             echo $sql;
 
