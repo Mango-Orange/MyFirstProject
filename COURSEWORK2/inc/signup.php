@@ -34,13 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $password = "password";
     $dbname = "localdb";
 
-// Create connection
-    $conn = mysqli_connect($username, $password, $dbname);
-// Check connection
-    if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-}
-
 
         function checklogin($username, $password, $db)
         {
