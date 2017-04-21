@@ -39,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         {
             $sql = "INSERT INTO users (username, password)
                 VALUES ($username, $password)";
+
+            echo $sql;
             while ($row = $result->fetch_array()) {
                 return true;
             }
@@ -61,6 +63,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 ?>
 
 
-
-$sql = INSERT INTO users (username, password)
-        VALUES ($surname, $password)
+</html>
