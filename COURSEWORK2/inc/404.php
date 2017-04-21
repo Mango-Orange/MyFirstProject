@@ -1,2 +1,1 @@
-<H1>PHOTO UPLOADED SUCCESSFULLY</H1>
-<H2>.JPG type!</H2>
+<p>Error</p>
