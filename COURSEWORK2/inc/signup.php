@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $username = "username";
     $password = "password";
-    $dbname = "localdb";
+    $dbname = "users";
 
 // Create connection
     $conn = mysqli_connect($username, $password, $dbname);
