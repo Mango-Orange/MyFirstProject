@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
@@ -41,10 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 VALUES ($username, $password)";
 
             echo $sql;
-            while ($row = $result->fetch_array()) {
-                return true;
-            }
-            return false;
+
         }
 
         if (checklogin($username, $password, $db)) {
