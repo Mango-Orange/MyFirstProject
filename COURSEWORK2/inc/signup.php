@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         function checklogin($username, $password, $db)
         {
-            $sql = INSERT INTO users (username, password)
+            $sql = "INSERT INTO users WHERE username='" . $username . "' and password='" . $password . "'";
                 VALUES ($surname, $password)
             $result = $db->query($sql);
             while ($row = $result->fetch_array()) {
