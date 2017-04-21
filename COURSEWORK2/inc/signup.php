@@ -42,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 VALUES ('$username', '$password')";
 
             echo $sql;
-
+            exit;
         }
 
         if (checklogin($username, $password, $db)) {
             session_start();
             $_SESSION['username'] = $username;
-            header("location:./");
+           // header("location:./");
         } else {
             //header("location:login");
         }
