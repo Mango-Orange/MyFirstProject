@@ -1,10 +1,28 @@
 <?php
 //open connection to my mysql db
-$connection = mysqli_connect("hostname", "username","password","users") or die("Error 1 " . mysqli_error($connection));
+$connectstr_dbhost = '';
+$connectstr_dbname = '';
+$connectstr_dbusername = '';
+$connectstr_dbpassword = '';
+
+
+foreach ($_SERVER as $key => $value) {
+    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
+        continue;
+    }
+
+    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
+    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+}
+
+$db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
 //fetch table rows from mysql db
 $sql = "SELECT * FROM users";
-$result = mysqli_query($connections, $sql) or die("Error in selecting " . mysqli_error($connections));
+$result = $db->query($sql);
+while ($row = $result->fetch_array());
 
 //create an array
 $emparray = array();
@@ -16,7 +34,7 @@ while($row =mysqli_fetch_assoc($result))
 echo json_encode($emparray);
 
 //close the db connection
-mysqli_close($connections);
+mysqli_close($db);
 ?>
 
 
