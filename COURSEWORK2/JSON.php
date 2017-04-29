@@ -21,7 +21,7 @@ $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbp
 
 
 //fetch table rows from mysql db
-$sql = "select * from localdb";
+$sql = "select * from users";
 $result = mysqli_query($db, $sql) or die("Error in selecting " . mysqli_error($db));
 
 //create an array
