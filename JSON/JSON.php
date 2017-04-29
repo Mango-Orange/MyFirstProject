@@ -31,5 +31,5 @@ if (!$db) {
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($db) . PHP_EOL;
 
-mysqli_close($link);
+mysqli_close($db);
 ?>
