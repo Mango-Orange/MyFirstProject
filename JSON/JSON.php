@@ -28,7 +28,7 @@ while ($row = $result->fetch_array());
 $emparray = array();
 while ($row = $result->fetch_array())
 {
-    $emparray[] =$row;
+    $emparray[1] =$row;
 }
 
 echo json_encode($emparray);
