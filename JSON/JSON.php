@@ -26,7 +26,7 @@ while ($row = $result->fetch_array());
 
 //create an array
 $emparray = array();
-while($row =mysqli_fetch_assoc($result))
+while ($row = $result->fetch_array())
 {
     $emparray[] =$row;
 }
