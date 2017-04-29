@@ -4,7 +4,7 @@ $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbp
     $connectstr_dbname) or die("Error 1 " . mysqli_error($db));
 
 //fetch table rows from mysql db
-$sql = "SELECT * FROM `users`";
+$sql = "SELECT * FROM";
 $result = mysqli_query($db, $sql) or die("Error in selecting " . mysqli_error($db));
 
 //create an array
