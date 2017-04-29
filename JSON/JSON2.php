@@ -1,6 +1,6 @@
 <?php
 //open connection to my mysql db
-$connection = mysqli_connect("172.0.0.1","alexapp04.azurewebsites.net/", "azure@localhost ", "Kavala246","localdb") or die("Error 1" . mysqli_error($connection));
+$connection = mysqli_connect("172.0.0.1:55146", "azure@localhost","Kavala246","localdb") or die("Error 1" . mysqli_error($connection));
 
 //fetch table rows from mysql db
 $sql = "SELECT * FROM users";
