@@ -32,4 +32,4 @@ echo "Success: A proper connection to MySQL was made! The my_db datab
 echo "Host information: " . mysqli_get_host_info($db) . PHP_EOL;
 
 mysqli_close($db);
-?>
+
