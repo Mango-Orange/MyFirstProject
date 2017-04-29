@@ -21,7 +21,7 @@ $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbp
 
 //fetch table rows from mysql db
 $sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
-$result = mysqli_query($db, $sql) or die("Error in Selecting " . mysqli_error($db));
+$result = $db->query($sql);
 while ($row = $result->fetch_array());
 
 //create an array
