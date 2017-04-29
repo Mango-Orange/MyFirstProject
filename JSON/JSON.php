@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("127.0.0.1", "azure@localhost", "Kavala246", "localdb");
+$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "my_db");
 
 if (!$link) {
         echo "Error: Unable to connect to MySQL." . PHP_EOL;
