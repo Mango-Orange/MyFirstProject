@@ -1,5 +1,5 @@
-<?php
-//open connection to my mysql db
+<?
+
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
 $connectstr_dbusername = '';
@@ -19,21 +19,6 @@ foreach ($_SERVER as $key => $value) {
 
 $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
-//fetch table rows from mysql db
-$sql = "SELECT * FROM 'users' WHERE 1";
-$result = $db->query($sql);
-while ($row = $result->fetch_array());
 
-//create an array
-$emparray = array();
-while($row =mysqli_fetch_assoc($result))
-{
-    $emparray[] =$row;
-}
-
-echo json_encode($emparray);
-
-//close the db connection
-mysqli_close($db);
 ?>
-
+ 
