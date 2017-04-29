@@ -37,4 +37,3 @@ echo json_encode($emparray);
 mysqli_close($db);
 ?>
 
-
