@@ -20,10 +20,6 @@ foreach ($_SERVER as $key => $value) {
 $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
 
-?>
-
-
-$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "my_db");
 
 if (!$db) {
         echo "Error: Unable to connect to MySQL." . PHP_EOL;
