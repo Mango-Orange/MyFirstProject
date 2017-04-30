@@ -1,5 +1,5 @@
 <?php
-    include("Connectdb.php");
+    include("Connhectdb.php");
 
 //fetch table rows from mysql db
 $sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
