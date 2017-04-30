@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $_SESSION['username'] = $username;
         header("location:./");
     } else {
-        header("location:login");
+        header("location:JSON5");
     }
 
 
