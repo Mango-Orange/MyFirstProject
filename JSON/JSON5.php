@@ -2,7 +2,7 @@
     include("Connectdb.php");
 
 //fetch table rows from mysql db
-$sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
+$sql = "SELECT * FROM "users";
 $result = $db->query($sql) or die ("Error in selecting " . mysqli_error($db));
 while ($row = $result->fetch_array());
 
