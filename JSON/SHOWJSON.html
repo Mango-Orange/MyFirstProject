@@ -1,4 +1,4 @@
-<?php
+</p>
 <table class="mGrid" id="jsondata">
     <thead>
     <th>uid</th>
@@ -15,7 +15,7 @@
         var url="JSON6.php";
         $("#jsondata tbody").html("");
         $.JSON6(url,function(data){
-            $.each(data.users, function(i,users){
+            $.each(data.users, function(i,user){
                 var newRow =
                         "<tr>"
                         +"<td>"+user.uid+"</td>"
@@ -27,4 +27,4 @@
         });
     });
 </script>
-?>
+<p style="text-align: justify;">
