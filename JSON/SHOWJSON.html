@@ -18,9 +18,9 @@
             $.each(data.users, function(i,user){
                 var newRow =
                         "<tr>"
-                        +"<td>"+user.uid+"</td>"
-                        +"<td>"+user.username+"</td>"
-                        +"<td>"+user.password+"</td>"
+                        +"<td>"+users.uid+"</td>"
+                        +"<td>"+users.username+"</td>"
+                        +"<td>"+users.password+"</td>"
                         +"</tr>" ;
                 $(newRow).appendTo("#jsondata tbody");
             });
