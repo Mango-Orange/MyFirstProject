@@ -15,5 +15,3 @@ while($obj = mysqli_fetch_object($result)) {
 echo '{"users":'.json_encode($var).'}';
 
 ?>
-style="text-align: justify;"
-    
