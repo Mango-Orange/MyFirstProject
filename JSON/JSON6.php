@@ -1,4 +1,3 @@
-</p>
 <?php
 include("Connectdb.php");
 
@@ -15,4 +14,6 @@ while($obj = mysqli_fetch_object($result)) {
 }
 echo '{"users":'.json_encode($var).'}';
 
-<p style="text-align: justify;">
+?>
+style="text-align: justify;"
+    
