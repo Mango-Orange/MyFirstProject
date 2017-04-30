@@ -20,7 +20,7 @@ foreach ($_SERVER as $key => $value) {
 $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
 //fetch table rows from mysql db
- $sql = "select * from users";
+ $sql = "select * from users"; 
     $result = mysqli_query($db, $sql) or die("Error in Selecting " . mysqli_error($db));
 
     //create an array
