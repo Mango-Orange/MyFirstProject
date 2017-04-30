@@ -3,7 +3,7 @@
 
 //fetch table rows from mysql db
 $sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
-$result = $db->query($sql) or die ("Error in selecting " . mysqli_error($db));
+$result = $db->query($db, $sql) or die ("Error in selecting " . mysqli_error($db));
 while ($row = $result->fetch_array());
 
 //create an array
