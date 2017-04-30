@@ -19,20 +19,16 @@ foreach ($_SERVER as $key => $value) {
 
 $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
-//fetch table rows from mysql db
-$sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
-$result = $db->query($sql) or die ("Error in selecting " . mysqli_error($db));
-while ($row = $result->fetch_array());
-
-//create an array
-$emparray = array();
-while ($row = $result->fetch_array())
-{
-    $emparray[] =$row;
+if (!$db) {
+    trigger_error('Could not connect to MySQL: ' . mysqli_connect_error());
 }
+$var = array();
+$sql = "SELECT * FROM users";
+$result = mysqli_query($db, $sql);
 
-echo json_encode($emparray);
+while($obj = mysqli_fetch_object($result)) {
+    $var[] = $obj;
+}
+echo '{"users":'.json_encode($var).'}';
 
-//close the db connection
-mysqli_close($db);
 ?>
