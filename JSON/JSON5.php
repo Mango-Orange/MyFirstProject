@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
-    include("Connectdb.php");
+    include("JSON/Connectdb.php");
 
     $username = $_POST["username"];
     $password = $_POST["password"];
