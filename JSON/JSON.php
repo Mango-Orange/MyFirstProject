@@ -25,8 +25,8 @@ $result = $db->query($sql) or die ("Error in selecting " . mysqli_error($db));
 while ($row = $result->fetch_array());
 
 //create an array
-$emparray = array();  
-while ($row = $result->fetch_array())
+$emparray = array();
+while($row =mysqli_fetch_assoc($result))
 {
     $emparray[] =$row;
 }
