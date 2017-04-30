@@ -20,8 +20,9 @@ foreach ($_SERVER as $key => $value) {
 $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
 //fetch table rows from mysql db
-$sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
-$result = $db->query($sql) or die ("Error in selecting " . mysqli_error($db));
+$sql = "SELECT * FROM users (username, password);
+  VALUES ('$username', '$password')\";
+$result = $db->query($db, $sql) or die ("Error in selecting " . mysqli_error($db));
 while ($row = $result->fetch_array());
 
 //create an array
