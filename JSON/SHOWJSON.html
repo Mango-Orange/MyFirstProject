@@ -1,4 +1,4 @@
-</p>
+<?php
 <table class="mGrid" id="jsondata">
     <thead>
     <th>uid</th>
@@ -12,19 +12,19 @@
 <script type="text/javascript">
 
     $(<span class="IL_AD" id="IL_AD8">document</span>).ready(function(){
-        var url="http://alexapp04.azurewebsites.net/JSON/JSON6.php";
+        var url="JSON6.php";
         $("#jsondata tbody").html("");
         $.JSON6(url,function(data){
             $.each(data.users, function(i,users){
                 var newRow =
                         "<tr>"
-                        +"<td>"+users.uid+"</td>"
-                        +"<td>"+users.username+"</td>"
-                        +"<td>"+users.password+"</td>"
+                        +"<td>"+user.uid+"</td>"
+                        +"<td>"+user.username+"</td>"
+                        +"<td>"+user.password+"</td>"
                         +"</tr>" ;
                 $(newRow).appendTo("#jsondata tbody");
             });
         });
     });
 </script>
-<p style="text-align: justify;">
+?>
