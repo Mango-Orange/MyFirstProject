@@ -1,20 +1,26 @@
 </p>
 
+
+data= file_get_contents (filename:'alexapp04.azurewebsites.net/JSON/JSON.php');
+
+user = json_decode($data);
+
+
 <table class="mGrid" id="jsondata">
     <thead>
     <th>uid</th>
     <th>username</th>
     <th>password</th>
     </thead>
-<tbody></tbody>
-    </table>
+    <tbody></tbody>
+</table>
 </div>
 
 <script type="text/javascript">
 
     $(<span class="IL_AD" id="IL_AD8">document</span>).ready(function(){
         var url="JSON6.php";
-        $("#jsondata tbody").html("http://alexapp04.azurewebsites.net/JSON/JSON6.php");
+        $("#jsondata tbody").html("http://alexapp04.azurewebsites.net/JSON/JSON.php");
         $.JSON6(url,function(data){
             $.each(data.users, function(i,user){
                 var newRow =
