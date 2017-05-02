@@ -1,12 +1,10 @@
 </p>
 
 
-data= file_get_contents (filename:'alexapp04.azurewebsites.net/JSON/JSON.php');
+$data = file_get_contents("http://alexapp04.azurewebsites.net/JSON/JSON.php");
+$user = json_decode($json);
 
-user = json_decode($data);
-
-
-<table class="mGrid" id="jsondata">
+<table class="mGrid" id="$data">
     <thead>
     <th>uid</th>
     <th>username</th>
@@ -20,7 +18,7 @@ user = json_decode($data);
 
     $(<span class="IL_AD" id="IL_AD8">document</span>).ready(function(){
         var url="JSON6.php";
-        $("#jsondata tbody").html("http://alexapp04.azurewebsites.net/JSON/JSON.php");
+        $("#data tbody").html("http://alexapp04.azurewebsites.net/JSON/JSON.php");
         $.JSON6(url,function(data){
             $.each(data.users, function(i,user){
                 var newRow =
@@ -29,7 +27,7 @@ user = json_decode($data);
                         +"<td>"+user.username+"</td>"
                         +"<td>"+user.password+"</td>"
                         +"</tr>" ;
-                $(newRow).appendTo("#jsondata tbody");
+                $(newRow).appendTo("#data tbody");
             });
         });
     });
