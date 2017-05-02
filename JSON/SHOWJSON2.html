@@ -1,35 +1,36 @@
-</p>
-
-
-$data = file_get_contents("http://alexapp04.azurewebsites.net/JSON/JSON.php");
-$user = json_decode($json);
+<?php
+    $json=file_get_contents("http://alexapp04.azurewebsites.net/JSON/JSON.php");
+    $data =  json_decode($json);
 
 <table class="mGrid" id="$data">
-    <thead>
-    <th>uid</th>
-    <th>username</th>
-    <th>password</th>
-    </thead>
-    <tbody></tbody>
+<thead>
+<th>uid</th>
+<th>username</th>
+<th>password</th>
+</thead>
+<tbody></tbody>
 </table>
 </div>
 
 <script type="text/javascript">
 
-    $(<span class="IL_AD" id="IL_AD8">document</span>).ready(function(){
-        var url="JSON6.php";
-        $("#data tbody").html("http://alexapp04.azurewebsites.net/JSON/JSON.php");
-        $.JSON6(url,function(data){
-            $.each(data.users, function(i,user){
-                var newRow =
-                        "<tr>"
-                        +"<td>"+user.uid+"</td>"
-                        +"<td>"+user.username+"</td>"
-                        +"<td>"+user.password+"</td>"
-                        +"</tr>" ;
-                $(newRow).appendTo("#data tbody");
-            });
-        });
-    });
-</script>
-<p style="text-align: justify;">
+    if (count($data->stand)) {
+// Open the table
+echo "<table>";
+
+    // Cycle through the array
+    foreach ($data->stand as $idx => $users) {
+
+    // Output a row
+    echo "<tr>";
+        echo "<td>$users->uid</td>";
+        echo "<td>$users->username</td>";
+            echo "<td>$users->passwords</td>";
+        echo "</tr>";
+    }
+
+    // Close the table
+    echo "</table>";
+}
+    </script>
+?>
