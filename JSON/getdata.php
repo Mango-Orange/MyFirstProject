@@ -2,6 +2,17 @@
 $json=file_get_contents("http://alexapp04.azurewebsites.net/JSON/JSON.php");
 $data =  json_decode($json);
 
+<table>
+<thead>
+    <th>uid</th>
+    <th>username</th>
+    <th>password</th>
+    </thead>
+<tbody></tbody>
+    </table>
+
+
+
 if (count($data->stand)) {
     // Open the table
     echo "<table>";
